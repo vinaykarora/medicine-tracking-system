@@ -55,9 +55,9 @@ namespace MTS.API.Service
             {
                 var idProperty = item.GetType().GetProperties().FirstOrDefault(p => string.Equals(p.Name, fieldName, StringComparison.OrdinalIgnoreCase));
 
-                if (idProperty != null && idProperty.CanWrite && idProperty.PropertyType.Name.Equals("Guid", StringComparison.CurrentCultureIgnoreCase))
+                if (idProperty != null && idProperty.CanWrite && idProperty.PropertyType.Name.Equals("int", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    idProperty.SetValue(item, Guid.Parse(data));
+                    idProperty.SetValue(item, int.Parse(data));
                 }
                 else if (idProperty != null && idProperty.CanWrite)
                     idProperty.SetValue(item, data);

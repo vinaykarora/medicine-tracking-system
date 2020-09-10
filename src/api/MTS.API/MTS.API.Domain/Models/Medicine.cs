@@ -7,7 +7,7 @@ namespace MTS.API.Domain
 {
     public class Medicine
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string Brand { get; set; }
         public decimal Price { get; set; }

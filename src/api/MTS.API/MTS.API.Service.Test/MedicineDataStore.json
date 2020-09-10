@@ -1,0 +1,40 @@
+{
+  "medicine": [
+    {
+      "id": 2,
+      "fullName": "Unit Test Name",
+      "brand": "Unit Test Brand",
+      "price": 100.0,
+      "quantity": 200,
+      "expiryDate": "2020-12-09T22:44:30.8315232+05:30",
+      "notes": "Unit Test Notes"
+    },
+    {
+      "id": 3,
+      "fullName": "Unit Test Name",
+      "brand": "Unit Test Brand",
+      "price": 100.0,
+      "quantity": 200,
+      "expiryDate": "2020-12-09T22:48:20.0868269+05:30",
+      "notes": "Unit Test Notes"
+    },
+    {
+      "id": 4,
+      "fullName": "Unit Test Name",
+      "brand": "Unit Test Brand",
+      "price": 100.0,
+      "quantity": 200,
+      "expiryDate": "2020-12-09T22:50:17.5558428+05:30",
+      "notes": "Unit Test Notes"
+    },
+    {
+      "id": 5,
+      "fullName": "Unit Test Name",
+      "brand": "Unit Test Brand",
+      "price": 100.0,
+      "quantity": 200,
+      "expiryDate": "2020-12-09T22:50:17.6560148+05:30",
+      "notes": "Unit Test Notes"
+    }
+  ]
+}

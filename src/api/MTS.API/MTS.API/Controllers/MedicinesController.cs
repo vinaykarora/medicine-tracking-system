@@ -29,7 +29,7 @@ namespace MTS.API.Controllers
 
         // GET: api/Medicines/5
         [HttpGet("{id}")]
-        public IActionResult GetMedicine([FromRoute] Guid id)
+        public IActionResult GetMedicine([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
@@ -48,7 +48,7 @@ namespace MTS.API.Controllers
 
         // PUT: api/Medicines/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMedicine([FromRoute] Guid id, [FromBody] Medicine medicine)
+        public async Task<IActionResult> PutMedicine([FromRoute] int id, [FromBody] Medicine medicine)
         {
             if (!ModelState.IsValid)
             {
@@ -82,14 +82,14 @@ namespace MTS.API.Controllers
             }
 
 
-            Guid id = await _medicineService.PostMedicineAsync(medicine);
+            int id = await _medicineService.PostMedicineAsync(medicine);
 
             return CreatedAtAction("GetMedicine", new { id = id }, medicine);
         }
 
         // DELETE: api/Medicines/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteMedicine([FromRoute] Guid id)
+        public async Task<IActionResult> DeleteMedicine([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {

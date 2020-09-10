@@ -18,7 +18,7 @@ namespace MTS.API.Service.Medicine
             _dataStore = new DataStore(_jsonFilePath);
         }
 
-        public Domain.Medicine GetMedicine(Guid id)
+        public Domain.Medicine GetMedicine(int id)
         {
             IDocumentCollection<Domain.Medicine> collection = GetMedicines();
             return collection.AsQueryable().Single(s => s.Id == id);
@@ -35,9 +35,8 @@ namespace MTS.API.Service.Medicine
             return collection.AsQueryable().Select(model => DomainToViewModel(model));
         }
 
-        public async Task<Guid> PostMedicineAsync(Domain.Medicine medicine)
+        public async Task<int> PostMedicineAsync(Domain.Medicine medicine)
         {
-            medicine.Id = Guid.NewGuid();
             IDocumentCollection<Domain.Medicine> collection = GetMedicines();
             await collection.InsertOneAsync(medicine);
             return medicine.Id;
@@ -49,7 +48,7 @@ namespace MTS.API.Service.Medicine
             await collection.UpdateOneAsync(medicine.Id, medicine);
         }
 
-        public async Task DeleteMedicineAsync(Guid id)
+        public async Task DeleteMedicineAsync(int id)
         {
             IDocumentCollection<Domain.Medicine> collection = GetMedicines();
             await collection.DeleteOneAsync(id);

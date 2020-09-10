@@ -10,9 +10,9 @@ namespace MTS.API.Service.Medicine
     {
         IDocumentCollection<Domain.Medicine> GetMedicines();
         IEnumerable<MedicineViewModel> GetMedicinesViewModel();
-        Domain.Medicine GetMedicine(Guid id);
+        Domain.Medicine GetMedicine(int id);
         Task PutMedicineAsync(Domain.Medicine medicine);
-        Task<Guid> PostMedicineAsync(Domain.Medicine medicine);
-        Task DeleteMedicineAsync(Guid id);
+        Task<int> PostMedicineAsync(Domain.Medicine medicine);
+        Task DeleteMedicineAsync(int id);
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTS.API.Service", "MTS.API.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTS.API.Domain", "MTS.API.Domain\MTS.API.Domain.csproj", "{BB150BFA-66B5-46DB-B043-5D36358CDA40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTS.API.Service.Test", "MTS.API.Service.Test\MTS.API.Service.Test.csproj", "{C9E9523E-FCA2-44D7-8A10-8C78080AF8B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BB150BFA-66B5-46DB-B043-5D36358CDA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB150BFA-66B5-46DB-B043-5D36358CDA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB150BFA-66B5-46DB-B043-5D36358CDA40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E9523E-FCA2-44D7-8A10-8C78080AF8B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E9523E-FCA2-44D7-8A10-8C78080AF8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E9523E-FCA2-44D7-8A10-8C78080AF8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E9523E-FCA2-44D7-8A10-8C78080AF8B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
