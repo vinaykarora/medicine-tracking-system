@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MTS.API.Service.Medicine;
 
 namespace MTS.API
 {
@@ -25,6 +26,15 @@ namespace MTS.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    );
+            });
+            services.AddTransient<IMedicineService, MedicineService>();
             services.AddControllers();
         }
 
@@ -41,6 +51,7 @@ namespace MTS.API
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

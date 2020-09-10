@@ -1,0 +1,13 @@
+{
+  "medicine": [
+    {
+      "id": "8202f632-deb7-486d-a1e9-9d214fd9a65a",
+      "fullName": "Test Medicine",
+      "brand": "Test brand",
+      "price": 120.03,
+      "quantity": 10,
+      "expiryDate": "2020-01-20T00:00:00",
+      "notes": "test notes"
+    }
+  ]
+}

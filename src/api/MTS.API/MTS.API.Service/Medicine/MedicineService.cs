@@ -14,7 +14,7 @@ namespace MTS.API.Service.Medicine
         private readonly string _jsonFilePath;
         public MedicineService()
         {
-            _jsonFilePath = Assembly.GetCallingAssembly().FullName;
+            _jsonFilePath = Assembly.GetExecutingAssembly().Location.Replace("bin\\Debug\\netcoreapp3.1\\MTS.API.Service.dll", "MedicineDataStore.json");
             _dataStore = new DataStore(_jsonFilePath);
         }
 
@@ -83,7 +83,7 @@ namespace MTS.API.Service.Medicine
             }
             else if (viewModel.ExpiryDate < DateTime.Now.AddDays(30))
             {
-                viewModel.BackgroundColor = Color.Yellow.Name;
+                viewModel.BackgroundColor = Color.Red.Name;
             }
 
             return viewModel;
